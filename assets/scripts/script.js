@@ -1,4 +1,8 @@
 // Function to collect quotes from kanye.rest
+var yeContainer = document.querySelector("#kanye-container");
+var taylorContainer = document.querySelector("#taylor-container");
+var dadContainer = document.querySelector("#dad-container");
+
 function getYe(){
 
     // request data
@@ -17,6 +21,7 @@ function getYe(){
                 .then(function (data){
                     var yeText = data["quote"];
                     console.log(yeText);
+                    yeContainer.innerHTML = yeText;
                 });
         };
     // };
@@ -54,7 +59,7 @@ function getSwift(){
             .then(function (data){
                 var swiftText = data["quote"];
                 console.log(swiftText);
-
+                taylorContainer.innerHTML = swiftText;
 	// data.quote - will show text from quote itself
             });
 
@@ -84,6 +89,7 @@ function getDadJoke(){
         
                 var dadJoke = data["joke"];
                 console.log(dadJoke);
+                dadContainer.innerHTML = dadJoke;
             });
 };
 
