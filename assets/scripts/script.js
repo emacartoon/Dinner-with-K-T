@@ -95,26 +95,41 @@ function getDadJoke(){
 
 getDadJoke();
 
-//Function to collect images of food from Foodish
-function getFood(){
+// Select a random image from a folder array
+var randImg = ["Dinner2.png", "Dinner3.png", "Dinner4.png", "Dinner5.png"];
+var basePath = "./assets/imgs/randImgs/";
 
-    //request data
-        //find api url to fetch data
-           var baseURL = "https://foodish-api.herokuapp.com/api/";
+function imgRandom() {
+    for (var i = 0; i < 3; i++) {
+        var rand = randImg[Math.floor(Math.random() * randImg.length)];
+        var image = new Image();
+        image.src = basePath+rand;
+        document.body.appendChild(image);
+    }
+}
 
-        //fetch the data
-             fetch(baseURL)
+console.log(imgRandom(randImg));
+
+// //Function to collect images of food from Foodish
+// function getFood(){
+
+//     //request data
+//         //find api url to fetch data
+//            var baseURL = "https://foodish-api.herokuapp.com/api/";
+
+//         //fetch the data
+//              fetch(baseURL)
     
-        //collect data and convert to json format
-            .then(function (response){
-                return response.json();
-             })
+//         //collect data and convert to json format
+//             .then(function (response){
+//                 return response.json();
+//              })
     
-        //present data in console
-            .then(function (image){
-                var imgUrl = image["image"];
-                console.log(imgUrl);
-            });
-};
+//         //present data in console
+//             .then(function (image){
+//                 var imgUrl = image["image"];
+//                 console.log(imgUrl);
+//             });
+// };
 
-getFood();
+// getFood();
