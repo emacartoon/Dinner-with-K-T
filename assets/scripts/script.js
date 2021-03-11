@@ -1,4 +1,8 @@
 // Function to collect quotes from kanye.rest
+var yeContainer = document.querySelector("#kanye-container");
+var taylorContainer = document.querySelector("#taylor-container");
+var dadContainer = document.querySelector("#dad-container");
+
 function getYe(){
 
     // request data
@@ -15,7 +19,9 @@ function getYe(){
     
         //  present data in console
                 .then(function (data){
-                    console.log(data);
+                    var yeText = data["quote"];
+                    console.log(yeText);
+                    yeContainer.innerHTML = yeText;
                 });
         };
     // };
@@ -51,8 +57,9 @@ function getSwift(){
 
     //  present data in console
             .then(function (data){
-                console.log(data);
-
+                var swiftText = data["quote"];
+                console.log(swiftText);
+                taylorContainer.innerHTML = swiftText;
 	// data.quote - will show text from quote itself
             });
 
@@ -79,7 +86,10 @@ function getDadJoke(){
     
         //present data in console
             .then(function (data){
-                    console.log(data);
+        
+                var dadJoke = data["joke"];
+                console.log(dadJoke);
+                dadContainer.innerHTML = dadJoke;
             });
 };
 
@@ -102,7 +112,8 @@ function getFood(){
     
         //present data in console
             .then(function (image){
-                console.log(image);
+                var imgUrl = image["image"];
+                console.log(imgUrl);
             });
 };
 
