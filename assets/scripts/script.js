@@ -110,6 +110,9 @@ function imgRandom() {
 
 console.log(imgRandom(randImg));
 
+// Return api quotes based on specific userInput keywords
+
+
 // //Function to collect images of food from Foodish
 // function getFood(){
 
