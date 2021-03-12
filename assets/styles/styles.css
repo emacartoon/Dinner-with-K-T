@@ -7,7 +7,7 @@
 }
 
 html {
-  background-image: url('./assets/imgs/BGGradient.png');
+  background-image: url('../imgs/BGGradient.png');
   background-size: cover;
   background-repeat: repeat-x;
   background-color: var(--dkbrown);
@@ -25,10 +25,11 @@ h1 {
   font-family: "Great Vibes", cursive;
   color: white;
 }
-.masthead{
+
+.masthead {
   height: 10rem;
   width: 100%;
-  background-image: url('./assets/imgs/randImgs/Dinner1.png');
+  background-image: url('../imgs/randImgs/Dinner1.png');
   background-position: center;
 
 }
