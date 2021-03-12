@@ -17,7 +17,7 @@ html {
 
 body {
   font-family: "Commissioner", sans-serif;
-  background-color: #2f3034;
+  background-color: var(--dkgrey);
   color: white;
 }
 
@@ -34,28 +34,24 @@ h1 {
 }
 
 .table {
-  height:
-  border: 1px 
-  color: black
-
+  border: 1px solid black;
 }
 
 
 .kanye {
-  background-color:#9e6e03 ;
-
-
+  background-color: var(--honey) ;
+  font-family: 'Ink Free', sans-serif, 'Marker Felt', 'Comic Sans';
 }
 
 .taylor {
-  background-color: #9e6e03;
+  background-color: var(--honey);
 }
 
  
-.dad {background-color: #9e6e03;
+.dad {background-color: var(--honey);
 }
 
 
  
- button{ background-color: #707070;
+ button{ background-color: var(--grey);
 }
