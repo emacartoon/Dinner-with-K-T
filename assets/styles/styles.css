@@ -1,3 +1,18 @@
-h1{font-family: 'Great Vibes', cursive;}
+:root {
+  --honey: #9e6e03;
+  --brown: #5e450d;
+  --dkbrown: #261a00;
+  --grey: #707070;
+  --dkgrey: #2f3034;
+}
 
-body{font-family: 'Commissioner', sans-serif;}
+h1 {
+  font-family: "Great Vibes", cursive;
+  color: white;
+}
+
+body {
+  font-family: "Commissioner", sans-serif;
+  background-color: #707070;
+color: white;
+}

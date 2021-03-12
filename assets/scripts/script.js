@@ -95,20 +95,23 @@ function getDadJoke(){
 
 getDadJoke();
 
-// Select a random image from a folder array
-var randImg = ["Dinner2.png", "Dinner3.png", "Dinner4.png", "Dinner5.png"];
-var basePath = "./assets/imgs/randImgs/";
-
-function imgRandom() {
-    for (var i = 0; i < 1; i++) {
-        var rand = randImg[Math.floor(Math.random() * randImg.length)];
-        var image = new Image();
-        image.src = basePath+rand;
-        document.body.appendChild(image);
+var $masthead = document.getElementsByClassName(".masthead")
+    // Select a random image from a folder array
+    var randImg = ["Dinner2.png", "Dinner3.png", "Dinner4.png", "Dinner5.png"];
+    var basePath = "./assets/imgs/randImgs/";
+    function imgRandom() {
+        for (var i = 0; i < 1; i++) {
+            var rand = randImg[Math.floor(Math.random() * randImg.length)];
+            var image = new Image();
+            image.src = basePath+rand;
+            $masthead.style.background = "url(" + image + ") no-repeat center";
+            // document.body.appendChild(image);
+        }
     }
-}
+    console.log(imgRandom(randImg));
 
-console.log(imgRandom(randImg));
+// Return api quotes based on specific userInput keywords
+
 
 // //Function to collect images of food from Foodish
 // function getFood(){
