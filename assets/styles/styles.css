@@ -1,3 +1,11 @@
+:root {
+    --honey: #9e6e03;
+    --brown: #5E450d;
+    --dkbrown: #261A00;
+    --grey: #707070;
+    --dkgrey: #2F3034;
+  }
+
 h1{font-family: 'Great Vibes', cursive;}
 
 body{font-family: 'Commissioner', sans-serif;}
