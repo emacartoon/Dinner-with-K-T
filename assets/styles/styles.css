@@ -6,13 +6,56 @@
   --dkgrey: #2f3034;
 }
 
+html {
+  background-image: url('./assets/imgs/BGGradient.png');
+  background-size: cover;
+  background-repeat: repeat-x;
+  background-color: var(--dkbrown);
+
+}
+ 
+
+body {
+  font-family: "Commissioner", sans-serif;
+  background-color: #2f3034;
+  color: white;
+}
+
 h1 {
   font-family: "Great Vibes", cursive;
   color: white;
 }
+.masthead{
+  height: 10rem;
+  width: 100%;
+  background-image: url('./assets/imgs/randImgs/Dinner1.png');
+  background-position: center;
 
-body {
-  font-family: "Commissioner", sans-serif;
-  background-color: #707070;
-color: white;
+}
+
+.table {
+  height:
+  border: 1px 
+  color: black
+
+}
+
+
+.kanye {
+  background-color:#9e6e03 ;
+
+
+}
+
+.taylor {
+  background-color: #9e6e03;
+}
+
+ 
+.dad {background-color: #9e6e03;
+}
+
+
+ 
+ button{ background-color: #707070;
 }
