@@ -20,8 +20,8 @@ function getYe(){
         //  present data in console
                 .then(function (data){
                     var yeText = data["quote"];
-                    console.log(yeText);
-                    yeContainer.innerHTML = yeText;
+                    console.log("yeText:", yeText);
+                    yeContainer.innerHTML = yeText ;
                 });
         };
     // };
