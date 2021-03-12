@@ -1,43 +1,34 @@
 // Function to collect quotes from kanye.rest
-var yeContainer = document.querySelector("#kanye-container");
-var taylorContainer = document.querySelector("#taylor-container");
-var dadContainer = document.querySelector("#dad-container");
-
-function getYe(){
-
+var yeQuote = document.querySelector("#kanye-quote1");
+var taylorQuote = document.querySelector("#taylor-quote1");
+var dadQuote = document.querySelector("#dad-joke1");
+var submitBtn = document.querySelector("#Begin");
+var userInput = document.querySelector("#userinput");
+var yeBtn = document.querySelector("#kanye-quotes");
+var swiftBtn = document.querySelector("#taylor-quotes");
+var dadBtn = document.querySelector("#dad-joke");
+                 
+function getYe() {
     // request data
-    //      find api url to fetch data
-        var baseUrl = "https://api.kanye.rest";
+    // find api url to fetch data
+    var baseUrl = "https://api.kanye.rest";
+  
+    // fetch the data
+    fetch(baseUrl)
+      //  collect data and convert to json format
+      .then(function (response) {
+        return response.json();
+      })
+  
+      //  present data in console
+      .then(function (data) {
+        var yeText = data["quote"];
+        console.log("yeText: ", yeText);
+        yeQuote.textContent = yeText;
+      });
+  }
     
-        //  fetch the data
-            fetch(baseUrl)
-    
-        //  collect data and convert to json format
-                .then(function (response){
-                    return response.json();
-            })
-    
-        //  present data in console
-                .then(function (data){
-                    var yeText = data["quote"];
-                    console.log("yeText:", yeText);
-                    yeContainer.innerHTML = yeText ;
-                });
-        };
-    // };
-            
-        //  append quote text to list elements
-        //  create potential array of quotes???
-        //  which quotes to present first? Randomized? 
-    //         var chatBox = document.createElement("li");
-    //         var yeQuote = document.createElement("p");
-    //         yeQuote.textContent = data[i];
-    //         chatBox.append(yeQuote);
-    //             });
-    //     };
-    // };
-    
-getYe();
+// getYe();
 
 // Function to collect quotes from taylor.rest
 function getSwift(){
@@ -59,13 +50,13 @@ function getSwift(){
             .then(function (data){
                 var swiftText = data["quote"];
                 console.log(swiftText);
-                taylorContainer.innerHTML = swiftText;
+                taylorQuote.textContent = swiftText;
 	// data.quote - will show text from quote itself
             });
 
 };
 
-getSwift();
+// getSwift();
 
 //Function to collect dad jokes
 function getDadJoke(){
@@ -89,11 +80,25 @@ function getDadJoke(){
         
                 var dadJoke = data["joke"];
                 console.log(dadJoke);
-                dadContainer.innerHTML = dadJoke;
+                dadQuote.textContent = dadJoke;
             });
 };
 
-getDadJoke();
+// getDadJoke();
+
+// When a user clicks on a quote button, run function to call api and
+// set html <p> element text content to quote data
+yeBtn.addEventListener("click", function(){
+    getYe();
+});
+
+swiftBtn.addEventListener("click", function(){
+    getSwift();
+});
+
+dadBtn.addEventListener("click", function(){
+    getDadJoke();
+});
 
 var $masthead = document.getElementsByClassName(".masthead")
     // Select a random image from a folder array
@@ -111,7 +116,6 @@ var $masthead = document.getElementsByClassName(".masthead")
     console.log(imgRandom(randImg));
 
 // Return api quotes based on specific userInput keywords
-
 
 // //Function to collect images of food from Foodish
 // function getFood(){
