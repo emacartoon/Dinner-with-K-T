@@ -100,7 +100,7 @@ var randImg = ["Dinner2.png", "Dinner3.png", "Dinner4.png", "Dinner5.png"];
 var basePath = "./assets/imgs/randImgs/";
 
 function imgRandom() {
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < 1; i++) {
         var rand = randImg[Math.floor(Math.random() * randImg.length)];
         var image = new Image();
         image.src = basePath+rand;
