@@ -11,7 +11,7 @@ html {
   background-size: cover;
   background-repeat: repeat-x;
   background-color: var(--dkbrown);
-
+  /* margin: 0 0; */
 }
  
 .icon{
@@ -22,11 +22,12 @@ html {
 
 body {
   font-family: "Commissioner", sans-serif;
-  background-color: var(--dkgrey);
   color: white;
   text-align: center;
   font-size: 2rem;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 h2 {
@@ -36,7 +37,9 @@ h2 {
 h1 {
   font-family: "Great Vibes", cursive;
   color: white;
-  padding-top: 5rem;
+  margin-top: 10rem;
+  background-color: rgba(70,70,70, 0.2);
+  padding: 15px 0 5px 0;
 }
 
 .masthead {
@@ -48,13 +51,29 @@ h1 {
 }
 
 .table {
-  display: flex;
-  flex-direction: column;
+  background-color: var(--dkgrey);
   border: 1px solid black;
   width: 90%;
   min-height: 80%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  
 }
 
+#Conversation {
+  text-align: center;
+  width: 75%;
+  margin: 15px auto;
+  padding: 5px 0;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+p {
+  padding: 0;
+}
 
 .kanye {
   background-color: var(--honey);
@@ -63,6 +82,7 @@ h1 {
   border: 1px solid var(--grey);
   border-radius: 2rem;
   font-size: 2rem;
+  max-width: 80%;
 }
 
 .taylor {
@@ -71,6 +91,7 @@ h1 {
   border: 1px solid var(--grey);
   border-radius: 2rem;
   font-size: 2rem;
+  max-width: 80%;
 }
 
 
@@ -80,6 +101,7 @@ h1 {
   border: 1px solid var(--grey);
   border-radius: 2rem;
   font-size: 2rem;
+  max-width: 80%;
 }
 
 
