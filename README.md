@@ -1,7 +1,9 @@
 # Dinner-with-K-T
 
 ## Links
-https://github.com/emacartoon/Dinner-with-K-T
+* https://emacartoon.github.io/Dinner-with-K-T/
+
+* https://github.com/emacartoon/Dinner-with-K-T
 
 
 ## User Story
@@ -12,7 +14,7 @@ Greetings, Ladies & Gentlemen:
 
 We would like to cordially invite you to a special evening with our prestigious guests who need no introduction
 
-*_Kanye West & Taylor Swift_*
+**_Kanye West & Taylor Swift_**
 
 As our premier dinner guests this is your chance to experience class at it's finest as you preview into the finer things in life.
 
