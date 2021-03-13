@@ -21,6 +21,7 @@ function getYe() {
     //  present data in console
     .then(function (data) {
       yeQuote = document.createElement("p");
+      p.classlist.add("kanye");
       yeText = data["quote"];
       console.log("yeText: ", yeText);
       yeQuote.textContent = yeText;
@@ -46,6 +47,7 @@ function getSwift() {
     //  present data in console
     .then(function (data) {
       swiftQuote = document.createElement("p");
+      p.classlist.add("taylor");
       var swiftText = data["quote"];
       console.log("swiftText: ", swiftText);
       swiftQuote.textContent = swiftText;
@@ -75,6 +77,7 @@ function getDadJoke() {
     //present data in console
     .then(function (data) {
       dadQuote = document.createElement("p");
+      p.classlist.add("dad");
       var dadJoke = data["joke"];
       console.log("dadJoke: ", dadJoke);
       dadQuote.textContent = dadJoke;
