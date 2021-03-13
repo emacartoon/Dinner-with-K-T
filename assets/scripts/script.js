@@ -98,11 +98,7 @@ dadBtn.addEventListener("click", function () {
   getDadJoke();
 });
 
-function eventHander(e) {
-  if (e.click > 10) {
-    return;
-  }
-}
+
 
 var $masthead = document.getElementsByClassName("masthead");
 // Select a random image from a folder array
