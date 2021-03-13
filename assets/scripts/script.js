@@ -1,12 +1,10 @@
 // Variables querying html document elements
-var yeQuote = document.querySelector("#kanye-quote1");
-var taylorQuote = document.querySelector("#taylor-quote1");
-var dadQuote = document.querySelector("#dad-joke1");
+var addQuote = document.querySelector("#Conversation");
 var submitBtn = document.querySelector("#Begin");
 var userInput = document.querySelector("#userinput");
-var yeBtn = document.querySelector("#kanye-quotes");
-var swiftBtn = document.querySelector("#taylor-quotes");
-var dadBtn = document.querySelector("#dad-joke");
+var yeBtn = document.getElementById("kanye-quotes");
+var swiftBtn = document.getElementById("taylor-quotes");
+var dadBtn = document.getElementById("dad-joke");
 
 function getYe() {
   // request data
@@ -22,9 +20,11 @@ function getYe() {
 
     //  present data in console
     .then(function (data) {
+      yeQuote = document.createElement("p");
       yeText = data["quote"];
       console.log("yeText: ", yeText);
       yeQuote.textContent = yeText;
+      addQuote.append(yeQuote);
       localStorage.setItem("Kanye Quote", yeText);
       quoteArr.push(localStorage.getItem("Kanye Quote"));
     });
@@ -45,9 +45,11 @@ function getSwift() {
 
     //  present data in console
     .then(function (data) {
+      swiftQuote = document.createElement("p");
       var swiftText = data["quote"];
       console.log("swiftText: ", swiftText);
-      taylorQuote.textContent = swiftText;
+      swiftQuote.textContent = swiftText;
+      addQuote.append(swiftQuote);
       localStorage.setItem("Swift Quote", swiftText);
       quoteArr.push(localStorage.getItem("Swift Quote"));
     });
@@ -72,33 +74,46 @@ function getDadJoke() {
 
     //present data in console
     .then(function (data) {
+      dadQuote = document.createElement("p");
       var dadJoke = data["joke"];
       console.log("dadJoke: ", dadJoke);
       dadQuote.textContent = dadJoke;
+      addQuote.append(dadQuote);
       localStorage.setItem("Dad Joke", dadJoke);
       quoteArr.push(localStorage.getItem("Dad Joke"));
     });
 }
 
-// getDadJoke();
-
 // When a user clicks on a quote button, run function to call api and
 // set html <p> element text content to quote data
-var quoteArr = [];
 
 yeBtn.addEventListener("click", function () {
   getYe();
+  disableBtn();
 });
 
 swiftBtn.addEventListener("click", function () {
   getSwift();
+  disableBtn();
 });
 
 dadBtn.addEventListener("click", function () {
   getDadJoke();
+  disableBtn();
 });
 
+// Create new array to store api quote data
+// If the array's length contains 10 quotes,
+// Display a button to restart the conversation
+var quoteArr = []
 
+function disableBtn(){
+if(addQuote.childElementCount === 9){
+  yeBtn.disabled = true;
+  swiftBtn.disabled = true;
+  dadBtn.disabled = true;
+  };
+};
 
 var $masthead = document.getElementsByClassName("masthead");
 // Select a random image from a folder array
