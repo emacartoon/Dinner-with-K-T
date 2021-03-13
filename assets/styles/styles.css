@@ -1,4 +1,4 @@
-p:root {
+:root {
   --honey: #9e6e03;
   --brown: #5e450d;
   --dkbrown: #261a00;
@@ -14,6 +14,11 @@ html {
 
 }
  
+.icon{
+  width: 100px;
+  height: 100px;
+  padding: .5rem;
+}
 
 body {
   font-family: "Commissioner", sans-serif;
@@ -21,6 +26,7 @@ body {
   color: white;
   text-align: center;
   font-size: 2rem;
+  margin: 0 auto;
 }
 
 h2 {
@@ -30,6 +36,7 @@ h2 {
 h1 {
   font-family: "Great Vibes", cursive;
   color: white;
+  padding-top: 5rem;
 }
 
 .masthead {
@@ -37,6 +44,7 @@ h1 {
   width: 100%;
   background-image: url("../imgs/randImgs/Dinner1.png");
   background-position: center;
+  height: 20rem;
 }
 
 .table {
@@ -76,10 +84,12 @@ h1 {
 
 
 button {
-  border-radius: 50px 50px 50px 50px;
+  border-radius: 20px;
   background-color: var(--grey);
-  padding: 20px;
-  height: 80px;
+  padding: 5px;
+  /* height: 100px; */
   width: 220px;
+  font-size: 1.5rem;
+  color: white;
 
 }
