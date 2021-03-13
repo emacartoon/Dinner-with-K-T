@@ -19,6 +19,8 @@ body {
   font-family: "Commissioner", sans-serif;
   background-color: var(--dkgrey);
   color: white;
+  text-align: center;
+  font-size: 2rem;
 }
 
 h1 {
@@ -31,28 +33,46 @@ h1 {
   width: 100%;
   background-image: url('../imgs/randImgs/Dinner1.png');
   background-position: center;
-
 }
 
 .table {
+  display: flex;
+  flex-direction: column;
   border: 1px solid black;
+  width: 90%;
+  min-height: 80%;
 }
 
 
 .kanye {
   background-color: var(--honey) ;
   font-family: 'Ink Free', sans-serif, 'Marker Felt', 'Comic Sans';
+  padding: 5px;
+  border: 1px solid var(--grey);
+  border-radius: 2rem;
+  font-size: 2rem;
 }
 
 .taylor {
   background-color: var(--honey);
+  padding: 5px;
+  border: 1px solid var(--grey);
+  border-radius: 2rem;
+  font-size: 2rem;
 }
 
- 
-.dad {background-color: var(--honey);
+
+.dad {
+  background-color: var(--honey);
+  padding: 5px;
+  border: 1px solid var(--grey);
+  border-radius: 2rem;
+  font-size: 2rem;
 }
 
 
  
- button{ background-color: var(--grey);
+ button{
+   background-color: var(--grey);
+   padding: 5px;
 }
