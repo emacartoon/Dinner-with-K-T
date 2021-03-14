@@ -1,4 +1,5 @@
 // Variables querying html document elements
+
 var addQuote = document.getElementById("Conversation");
 var submitBtn = document.getElementById("Begin");
 var userInput = document.getElementById("userInput");
@@ -6,6 +7,8 @@ var yeBtn = document.getElementById("kanye-quotes");
 var swiftBtn = document.getElementById("taylor-quotes");
 var dadBtn = document.getElementById("dad-joke");
 var resetBtn = document.getElementById("resetbtn");
+
+
 var conversation = document.getElementById("Conversation");
 var userTopic;
 
