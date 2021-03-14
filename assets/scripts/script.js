@@ -1,10 +1,23 @@
 // Variables querying html document elements
 var addQuote = document.querySelector("#Conversation");
 var submitBtn = document.querySelector("#Begin");
-var userInput = document.querySelector("#userinput");
+var userInput = document.querySelector("#userInput");
 var yeBtn = document.getElementById("kanye-quotes");
 var swiftBtn = document.getElementById("taylor-quotes");
 var dadBtn = document.getElementById("dad-joke");
+var conversation = document.getElementById("Conversation");
+var userTopic;
+
+userInput.addEventListener("click", function(e){
+    e.preventDefault();
+    var text = document.querySelector("#input").value;
+    console.log("text =", text);
+    var userQuote = document.createElement("p");
+    userQuote.textContent = "What are your thoughts on " + text +" ?";
+    conversation.append(userQuote);
+    console.log("userQuote=",userQuote);
+    userTopic=text
+  })
 
 function getYe() {
   // request data
@@ -105,9 +118,7 @@ dadBtn.addEventListener("click", function () {
   disableBtn();
 });
 
-// Create new array to store api quote data
-// If the array's length contains 10 quotes,
-// Display a button to restart the conversation
+
 var quoteArr = []
 
 function disableBtn(){
