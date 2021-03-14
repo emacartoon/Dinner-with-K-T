@@ -8,18 +8,24 @@ var dadBtn = document.getElementById("dad-joke");
 var resetBtn = document.getElementById("resetbtn");
 
 function getYe() {
+
   // request data
   // find api url to fetch data
   var baseUrl = "https://api.kanye.rest";
 
   // fetch the data
   fetch(baseUrl)
+
     //  collect data and convert to json format
     .then(function (response) {
       return response.json();
     })
 
-    //  present data in console
+    // create new paragraph elements with a new css class,
+    // collect the quote data and set the text content of the
+    // new paragraph elements to be the collected quote,
+    // append the paragraph element each for each quote button click
+    // store the quote to local storage
     .then(function (data) {
       yeQuote = document.createElement("p");
       yeQuote.setAttribute("class", "kanye");
@@ -34,18 +40,24 @@ function getYe() {
 
 // Function to collect quotes from taylor.rest
 function getSwift() {
+
   // request data
-  //      find api url to fetch data
+  // find api url to fetch data
   var baseUrl = "https://api.taylor.rest/";
 
-  //  fetch the data
+  // fetch the data
   fetch(baseUrl)
-    //  collect data and convert to json format
+
+    // collect data and convert to json format
     .then(function (response) {
       return response.json();
     })
 
-    //  present data in console
+    // create new paragraph elements with a new css class,
+    // collect the quote data and set the text content of the
+    // new paragraph elements to be the collected quote,
+    // append the paragraph element each for each quote button click
+    // store the quote to local storage
     .then(function (data) {
       swiftQuote = document.createElement("p");
       swiftQuote.setAttribute("class", "taylor");
@@ -58,10 +70,9 @@ function getSwift() {
     });
 }
 
-// getSwift();
-
 //Function to collect dad jokes
 function getDadJoke() {
+
   //request data
   //find api url to fetch data
   var baseUrl = "https://icanhazdadjoke.com";
@@ -70,12 +81,17 @@ function getDadJoke() {
   fetch(baseUrl, {
     headers: { Accept: "application/json" },
   })
+  
     //collect data and convert to json format
     .then(function (response) {
       return response.json();
     })
 
-    // present data in console
+    // create new paragraph elements with a new css class,
+    // collect the quote data and set the text content of the
+    // new paragraph elements to be the collected quote,
+    // append the paragraph element each for each quote button click
+    // store the quote to local storage
     .then(function (data) {
       dadQuote = document.createElement("p");
       dadQuote.setAttribute("class", "dad");
@@ -110,20 +126,25 @@ dadBtn.addEventListener("click", function () {
 });
 
 // Create new array to store api quote data
-// If the array's length contains 10 quotes,
-// Display a button to restart the conversation
 var quoteArr = [];
 
 // disable quote buttons
+// when the conversation div contains 10 quotes
+// then the user cannot click the buttons
+// to add more quotes
 function disableBtn() {
   if (addQuote.childElementCount === 9) {
     yeBtn.disabled = true;
     swiftBtn.disabled = true;
     dadBtn.disabled = true;
   }
-};
+}
 
 // reset conversation button
+// when the conversation div presents 10 quotes
+// then the reset button will display
+// when the user clicks the reset button
+// then the page will refresh
   resetBtn.style.display = "none";
   function resetConversation() {
   if (addQuote.childElementCount === 9) {
@@ -135,45 +156,16 @@ function disableBtn() {
     }
   }
 
-var $masthead = document.getElementsByClassName("masthead");
 // Select a random image from a folder array
+var $masthead = document.getElementsByClassName("masthead");
 var randImg = ["Dinner2.png", "Dinner3.png", "Dinner4.png", "Dinner5.png"];
 var basePath = "./assets/imgs/randImgs/";
 function imgRandom() {
   for (i = 0; i < 1; i++) {
     var rand = randImg[Math.floor(Math.random() * randImg.length)];
     image = basePath + rand;
-    // var image = new Image();
-    // image.src = basePath + rand;
     imgURL = "url(" + "'" + image + "'" + ")";
     $masthead[0].style.backgroundImage = imgURL;
-    // document.body.appendChild(image);
   }
 }
 console.log(imgRandom(randImg));
-
-// Return api quotes based on specific userInput keywords
-
-// //Function to collect images of food from Foodish
-// function getFood(){
-
-//     //request data
-//         //find api url to fetch data
-//            var baseURL = "https://foodish-api.herokuapp.com/api/";
-
-//         //fetch the data
-//              fetch(baseURL)
-
-//         //collect data and convert to json format
-//             .then(function (response){
-//                 return response.json();
-//              })
-
-//         //present data in console
-//             .then(function (image){
-//                 var imgUrl = image["image"];
-//                 console.log(imgUrl);
-//             });
-// };
-
-// getFood();
