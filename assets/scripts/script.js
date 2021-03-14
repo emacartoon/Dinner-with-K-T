@@ -7,8 +7,6 @@ var yeBtn = document.getElementById("kanye-quotes");
 var swiftBtn = document.getElementById("taylor-quotes");
 var dadBtn = document.getElementById("dad-joke");
 var resetBtn = document.getElementById("resetbtn");
-
-
 var conversation = document.getElementById("Conversation");
 var userTopic;
 
