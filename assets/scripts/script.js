@@ -1,11 +1,27 @@
 // Variables querying html document elements
+
 var addQuote = document.getElementById("Conversation");
 var submitBtn = document.getElementById("Begin");
-var userInput = document.getElementById("userinput");
+var userInput = document.getElementById("userInput");
 var yeBtn = document.getElementById("kanye-quotes");
 var swiftBtn = document.getElementById("taylor-quotes");
 var dadBtn = document.getElementById("dad-joke");
 var resetBtn = document.getElementById("resetbtn");
+
+
+var conversation = document.getElementById("Conversation");
+var userTopic;
+
+userInput.addEventListener("click", function(e){
+    e.preventDefault();
+    var text = document.querySelector("#input").value;
+    console.log("text =", text);
+    var userQuote = document.createElement("p");
+    userQuote.textContent = "What are your thoughts on " + text +" ?";
+    conversation.append(userQuote);
+    console.log("userQuote=",userQuote);
+    userTopic=text
+  })
 
 function getYe() {
 
