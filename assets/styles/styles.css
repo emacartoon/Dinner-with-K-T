@@ -13,11 +13,12 @@ html {
   background-color: var(--dkbrown);
   /* margin: 0 0; */
 }
- 
-.icon{
+
+.icon {
   width: 100px;
   height: 100px;
-  padding: .5rem;
+  padding: 0.5rem;
+  filter: drop-shadow(5px 5px -- #2f3034);
 }
 
 body {
@@ -32,14 +33,17 @@ body {
 
 h2 {
   font-family: "Great Vibes", cursive;
+  text-shadow: black 1px 4px;
+  margin-bottom: 20px;
 }
 
 h1 {
   font-family: "Great Vibes", cursive;
   color: white;
   margin-top: 10rem;
-  background-color: rgba(70,70,70, 0.2);
+  background-color: rgba(70, 70, 70, 0.2);
   padding: 15px 0 5px 0;
+  text-shadow: black 1px 4px;
 }
 
 .masthead {
@@ -59,7 +63,6 @@ h1 {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  
 }
 
 #Conversation {
@@ -73,6 +76,9 @@ h1 {
 
 p {
   padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+  text-shadow: black 1px 3px;
 }
 
 .kanye {
@@ -113,5 +119,12 @@ button {
   width: 220px;
   font-size: 1.5rem;
   color: white;
+  margin: 5px;
+  margin-top: 15px;
+}
+ 
 
+footer {
+  background-color:var(--dkbrown);
+  color: var(--honey);
 }
