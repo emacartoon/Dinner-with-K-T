@@ -178,7 +178,7 @@ dadEats.style.display = "none";
 yeBtn.addEventListener("click", function () {
   kanyeEats.textContent = "Kanye is eating...";
   kanyeEats.style.display = "inline";
-  for(i = 0; i <= 2; i++){
+  for(i = 0; i <= 0; i++){
     getYe();
     disableBtn();
     resetConversation();
@@ -188,7 +188,7 @@ yeBtn.addEventListener("click", function () {
 swiftBtn.addEventListener("click", function () {
   taylorEats.textContent = "Taylor is eating...";
   taylorEats.style.display = "inline";
-  for(i = 0; i <= 2; i++){
+  for(i = 0; i <= 0; i++){
     getSwift();
     disableBtn();
     resetConversation();
@@ -198,7 +198,7 @@ swiftBtn.addEventListener("click", function () {
 dadBtn.addEventListener("click", function () {
   dadEats.textContent = "Dad is eating...";
   dadEats.style.display = "inline";
-  for(i = 0; i <= 2; i++){
+  for(i = 0; i <= 20; i++){
     getDadJoke();
     disableBtn();
     resetConversation();
