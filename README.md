@@ -1,7 +1,7 @@
 # Dinner-with-K-T
 
 ## Links
-* https://emacartoon.github.io/Dinner-with-K-T/
+* https://emacartoon.github.io/Dinner-with-K-T
 
 * https://github.com/emacartoon/Dinner-with-K-T
 
@@ -30,6 +30,10 @@ that will set you into the most oddly, yet curious mood.
 Our dinner will be talked about only to the most A-list platforms the world has seen.
 
 I hope you enjoy your meal; we have gone through great lengths to accompany only the finest.
+
+## Screenshots
+![As you see the page when it loads](/assets/imgs/Dinner_Screenshot.png)
+![Quote generation](/assets/imgs/Kanye_Quote.png)
 
 ## Wireframes
 ![Wireframe view 1](/assets/imgs/image-view1.png)
