@@ -198,7 +198,7 @@ swiftBtn.addEventListener("click", function () {
 dadBtn.addEventListener("click", function () {
   dadEats.textContent = "Dad is eating...";
   dadEats.style.display = "inline";
-  for(i = 0; i <= 20; i++){
+  for(i = 0; i <= 0; i++){
     getDadJoke();
     disableBtn();
     resetConversation();
