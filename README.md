@@ -22,9 +22,9 @@ We have been expecting your arrival to indulge in a curious yet oddly fascinatin
 
 In this dinner you will experience the most classy:
 
-*conversation
-*food and
-*attire
+* conversation
+* food and
+* attire
 that will set you into the most oddly, yet curious mood.
 
 Our dinner will be talked about only to the most A-list platforms the world has seen.
@@ -32,11 +32,11 @@ Our dinner will be talked about only to the most A-list platforms the world has 
 I hope you enjoy your meal; we have gone through great lengths to accompany only the finest.
 
 ## Wireframes
-![Wireframe view 1](./assets/imgs/image-view1.jpg)
-![Wireframe view 2](./assets/imgs/image-view2.jpg)
-![Wireframe view 3](./assets/imgs/image-view3.jpg)
+![Wireframe view 1](/assets/imgs/image-view1.png)
+![Wireframe view 2](/assets/imgs/image-view2.png)
+![Wireframe view 3](/assets/imgs/image-view3.png)
 
 ## API
-*https://github.com/gillescoolen/taylor.rest/blob/main/data/quotes.json
-*https://github.com/ajzbc/kanye.rest
-*https://icanhazdadjoke.com/api
+* https://github.com/gillescoolen/taylor.rest/blob/main/data/quotes.json
+* https://github.com/ajzbc/kanye.rest
+* https://icanhazdadjoke.com/api
