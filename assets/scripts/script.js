@@ -72,6 +72,8 @@ function getYe() {
         conversation.append(yeQuote);
         return;
       }else if(yeQuote.textContent.includes(userTopic) === false){
+        kanyeEats.style.display = "none";
+        conversation.append(yeQuote);
         return;
       }
     });
@@ -111,6 +113,8 @@ function getSwift() {
         conversation.append(swiftQuote);
         return;
       }else if(swiftQuote.textContent.includes(userTopic) === false){
+        taylorEats.style.display = "none";
+        conversation.append(swiftQuote);
         return;
       }
     });
@@ -152,6 +156,8 @@ function getDadJoke() {
         conversation.append(dadQuote);
         return;
       }else if(dadQuote.textContent.includes(userTopic) === false){
+        dadEats.style.display = "none";
+        conversation.append(dadQuote);
         return;
       }
     });
@@ -172,7 +178,7 @@ dadEats.style.display = "none";
 yeBtn.addEventListener("click", function () {
   kanyeEats.textContent = "Kanye is eating...";
   kanyeEats.style.display = "inline";
-  for(i = 0; i <= 10; i++){
+  for(i = 0; i <= 2; i++){
     getYe();
     disableBtn();
     resetConversation();
@@ -182,7 +188,7 @@ yeBtn.addEventListener("click", function () {
 swiftBtn.addEventListener("click", function () {
   taylorEats.textContent = "Taylor is eating...";
   taylorEats.style.display = "inline";
-  for(i = 0; i <= 10; i++){
+  for(i = 0; i <= 2; i++){
     getSwift();
     disableBtn();
     resetConversation();
@@ -192,7 +198,7 @@ swiftBtn.addEventListener("click", function () {
 dadBtn.addEventListener("click", function () {
   dadEats.textContent = "Dad is eating...";
   dadEats.style.display = "inline";
-  for(i = 0; i <= 10; i++){
+  for(i = 0; i <= 2; i++){
     getDadJoke();
     disableBtn();
     resetConversation();
@@ -240,3 +246,4 @@ function imgRandom() {
     $masthead[0].style.backgroundImage = imgURL;
   }
 }
+imgRandom();
